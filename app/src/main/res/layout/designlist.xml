@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:id="@+id/penampunglist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="0dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <LinearLayout
+            android:background="#F4F4F4"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/jCeramah"
+                    android:textColor="#313030"
+                    android:text="Judul Ceramah"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"/>
+
+                <TextView
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:textSize="14sp"
+                    android:id="@+id/nUstad"
+                    android:textColor="#075326"
+                    android:text="Nama Ustad"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_favorit"
+                android:src="@drawable/trash"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"/>
+
+            <ImageView
+                android:id="@+id/btn_share"
+                android:src="@drawable/ic_share"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

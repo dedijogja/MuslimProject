@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0"
+    >
+    <RelativeLayout
+        android:layout_above="@+id/iklanBannerKecilPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/playerAtas"
+            android:weightSum="7"
+            android:orientation="vertical"
+            android:background="#03897B"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/namaUstad"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    android:text="Jefri Albuqori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"/>
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/judulCeramah"
+                    android:textColor="#fff"
+                    android:text="Ceramah bab surga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <ImageView
+                    android:id="@+id/tombolPrev"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/prev" />
+
+                <ImageView
+                    android:id="@+id/tombolPlayPause"
+                    android:src="@drawable/pause"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/tombolNext"
+                    android:src="@drawable/next"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/waktu"
+            android:background="#03897B"
+            android:layout_below="@+id/playerAtas"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/waktuSaatIni"
+                android:layout_marginLeft="10dp"
+                android:text="00 : 10"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/pajangWaktuMusik"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:layout_marginLeft="10dp"
+                android:text="04 : 55"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <SeekBar
+            android:padding="0dp"
+            android:layout_below="@+id/waktu"
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:thumb="@drawable/seek_handler"
+            android:progressDrawable="@drawable/seekbar_progress" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleRandom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tombolKembali"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/back_icon"/>
+            <TextView
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/tombolTigaTitik"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/three_dots"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/iklanBannerKecilPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

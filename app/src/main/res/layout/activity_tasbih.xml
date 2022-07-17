@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu"
+    >
+
+    <LinearLayout
+        android:background="#03897B"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tombolKembali"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back_icon"/>
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tombolTigaTitik"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/three_dots"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <info.didustudio.ceramahustadFawwazMatJan.utilitas.KotakRelative
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:id="@+id/tombolHitungTasbih"
+            android:background="@drawable/tempat_tasbih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:textColor="#fff"
+                android:id="@+id/textPenampilJumlahTasbih"
+                android:text="0"
+                android:textSize="150sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </info.didustudio.ceramahustadFawwazMatJan.utilitas.KotakRelative>
+
+        <LinearLayout
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukkan Jumlah :"/>
+
+            <EditText
+                android:id="@+id/maksimalHitung"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="33"
+                android:textSize="30sp"
+                android:background="#ffffff"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:layout_width="216dp"
+                    android:layout_height="0dp">
+                    <ImageView
+                        android:id="@+id/tombolReset"
+                        android:layout_width="216dp"
+                        android:layout_height="91dp"
+                        android:src="@drawable/reset"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="216dp"
+                    android:layout_height="0dp">
+                    <ImageView
+                        android:id="@+id/tombolVibrate"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="216dp"
+                        android:layout_height="91dp"
+                        android:src="@drawable/vibrateon"
+                        android:scaleType="fitXY"
+                        />
+                    </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+</RelativeLayout>

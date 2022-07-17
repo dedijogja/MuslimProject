@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:orderInCategory="100"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_tasbih"
+        android:orderInCategory="101"
+        android:title="Tasbih Digital" />
+
+    <item
+        android:id="@+id/menu_asmaul_husna"
+        android:orderInCategory="101"
+        android:title="Asmaul Husna" />
+
+    <item
+        android:id="@+id/menu_nabi"
+        android:orderInCategory="101"
+        android:title="Nabi dan Rasul" />
+</menu>
